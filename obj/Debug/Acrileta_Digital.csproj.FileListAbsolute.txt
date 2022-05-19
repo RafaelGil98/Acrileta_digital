@@ -1,0 +1,15 @@
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\bin\Debug\Acrileta_Digital.exe.config
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\bin\Debug\Acrileta_Digital.exe
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\bin\Debug\Acrileta_Digital.pdb
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\obj\Debug\MainWindow.g.cs
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\obj\Debug\App.g.cs
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\obj\Debug\Acrileta_Digital_MarkupCompile.cache
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\obj\Debug\Acrileta_Digital_MarkupCompile.lref
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\obj\Debug\MainWindow.baml
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\obj\Debug\Acrileta_Digital.g.resources
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\obj\Debug\Acrileta_Digital.Properties.Resources.resources
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\obj\Debug\Acrileta_Digital.csproj.GenerateResource.cache
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\obj\Debug\Acrileta_Digital.csproj.CoreCompileInputs.cache
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\obj\Debug\Acrileta_Digital.exe
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\obj\Debug\Acrileta_Digital.pdb
+C:\Users\Seprocesa\source\repos\Acrileta_Digital\Acrileta_Digital\obj\Debug\Acrileta_Digital.csproj.AssemblyReference.cache

@@ -1,0 +1,41 @@
+Rafael
+Seprocesa
+123
+456
+350
+1000 X 0 = 0
+500 X 0 = 0
+200 X 1 = 200
+100 X 1 = 100
+50 X 1 = 50
+20 X 0 = 0
+Total: $350
+Comentario de prueba
+Rafael
+Seprocesa
+123
+789
+350
+1000 X 0 = 0
+500 X 0 = 0
+200 X 1 = 200
+100 X 1 = 100
+50 X 1 = 50
+20 X 0 = 0
+Total: $350
+
+Monedas manual
+Denom  Pcs.  Monto
+$2	23	$46
+$1	23	$23
+
+Concepto: bbva
+Monto: 234
+
+Segunda prueba de comentario
+
+
+
+
+
+Esperando conteo inicial.

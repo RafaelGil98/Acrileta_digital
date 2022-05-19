@@ -1,0 +1,185 @@
+﻿<Window x:Class="Acrileta_Digital.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Acrileta_Digital"
+        mc:Ignorable="d"
+        Title="Acrileta Digital" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="Información general" HorizontalAlignment="Center" Height="41"  VerticalAlignment="Top" Width="188" FontSize="18" Grid.ColumnSpan="3" Grid.Row="0"/>
+        <WrapPanel HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1" Height="205">
+            <ListBox Height="200" Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <Label x:Name="label2" Content="Usuario:" Height="30"  VerticalAlignment="Top" Width="90" FontSize="15"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left" >
+                    <Label x:Name="label3" Content="Cliente:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="90" FontSize="15"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <Label x:Name="label4" Content="Plomo:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="90" FontSize="15"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <Label x:Name="label5" Content="Folio:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="90" FontSize="15"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <Label x:Name="label6" Content="Importe:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="90" FontSize="15"/>
+                </ListBoxItem>
+            </ListBox>
+            <ListBox Height="200" Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <TextBox Name="Usuario" Width="90" Height="30"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left" >
+                    <TextBox Name="Cliente" Width="90" Height="30" ></TextBox>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <TextBox Name="Plomo" Width="90" Height="30" ></TextBox>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <TextBox Name="Folio" Width="90" Height="30" ></TextBox>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <TextBox Name="Importe" Width="90" Height="30" ></TextBox>
+                </ListBoxItem>
+            </ListBox>
+        </WrapPanel>
+        <TextBox x:Name="TextBlock1" Height="300" Width="200" Text="Esperando conteo inicial." Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" IsReadOnly="True" >
+        </TextBox>
+        <WrapPanel x:Name="Wcomentario" Height="235" Width="200" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Visibility="Hidden">
+            <Label Content="Escriba su comentario" HorizontalAlignment="Center" Height="30" Width="190" FontSize="15"/>
+            <TextBox x:Name="TextBlock2" Height="150" Width="200" HorizontalAlignment="Center"/>
+            <Button x:Name="Aceptar_com2" Content="Aceptar Comentario" Click="Aceptar_Comentario" Height="20" Width="130" HorizontalAlignment="Center"/>
+        </WrapPanel>
+        <Button Content="Terminar conteo" Click="Terminar_Conteo" Height="20" Width="100" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center"></Button>
+        <Button x:Name="Aceptar_captura"  Content="Aceptar Captura" Click="Aceptar_Captura" Height="20" Width="100" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Bottom" Visibility="Hidden"></Button>
+        <Button Content="Captura Manual" Click="Captura_Manual" Height="20" Width="100" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center"></Button>
+        <Button Content="Iniciar conteo" Click="Iniciar_Conteo" Height="20" Width="100" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center"></Button>
+        <WrapPanel x:Name="Manual" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Height="30" Visibility="Hidden">
+            <Button x:Name="Aceptar_moneda"  Content="MONEDAS" Click="Aceptar_Moneda" Height="35" Width="100" VerticalAlignment="Center" ></Button>
+            <Button x:Name="Aceptar_doc"  Content="DOCUMENTOS" Click="Aceptar_Documentos" Height="35" Width="100" VerticalAlignment="Center" ></Button>
+        </WrapPanel>
+        <WrapPanel x:Name="Monedas" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Height="265" Visibility="Hidden">
+            <ListBox Height="255" Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <Label x:Name="label7" Content="$20:" Height="30"  VerticalAlignment="Top" Width="90" FontSize="15"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left" >
+                    <Label x:Name="label8" Content="$10:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="90" FontSize="15"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <Label x:Name="label9" Content="$5:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="90" FontSize="15"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <Label x:Name="label10" Content="$2:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="90" FontSize="15"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <Label x:Name="label11" Content="$1:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="90" FontSize="15"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <Label x:Name="label12" Content="¢50:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="90" FontSize="15"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <Label x:Name="label13" Content="¢20:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="90" FontSize="15"/>
+                </ListBoxItem>
+            </ListBox>
+            <ListBox Height="255" Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <TextBox Name="m20" Width="90" Height="30"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left" >
+                    <TextBox Name="m10" Width="90" Height="30" ></TextBox>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <TextBox Name="m5" Width="90" Height="30" ></TextBox>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <TextBox Name="m2" Width="90" Height="30" ></TextBox>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <TextBox Name="m1" Width="90" Height="30" ></TextBox>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <TextBox Name="c50" Width="90" Height="30" ></TextBox>
+                </ListBoxItem>
+                <ListBoxItem  Width="100" HorizontalAlignment="left">
+                    <TextBox Name="c20" Width="90" Height="30" ></TextBox>
+                </ListBoxItem>
+            </ListBox>
+        </WrapPanel>
+        <WrapPanel x:Name="Documentos" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Height="250" Visibility="Hidden">
+            <ListBox Height="120" Width="135" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
+                <ListBoxItem  Width="125" HorizontalAlignment="left">
+                    <Label x:Name="labelConcepto" Content="Concepto:" Height="30"  VerticalAlignment="Top" Width="120" FontSize="15"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="125" HorizontalAlignment="left" >
+                    <Label x:Name="labelCantidad" Content="Cantidad:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="120" FontSize="15"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <Button x:Name="Aceptar_capturaD"  Content="Aceptar Captura" Click="Aceptar_CapturaD" Height="20" Width="120" VerticalAlignment="Bottom" ></Button>
+                </ListBoxItem>
+            </ListBox>
+            <ListBox Height="120" Width="135" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
+                <ListBoxItem  Width="125" HorizontalAlignment="left">
+                    <TextBox Name="concepto" Width="115" Height="30"/>
+                </ListBoxItem>
+                <ListBoxItem  Width="125" HorizontalAlignment="left" >
+                    <TextBox Name="cantidad" Width="115" Height="30"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <Button x:Name="Agregar_Documento"  Content="Agregar Documento" Click="Agregar_CapturaD" Height="20" Width="120" VerticalAlignment="Bottom" ></Button>
+                </ListBoxItem>
+            </ListBox>
+        </WrapPanel>
+        <WrapPanel x:Name="Resumen_final" Orientation="Vertical" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Height="230" Visibility="Hidden">
+            <WrapPanel HorizontalAlignment="Center" Height="205" >
+                <ListBox Height="200" Width="130" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
+                    <ListBoxItem  Width="120" HorizontalAlignment="left">
+                        <Label x:Name="cfl" Content="Conteo final" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="110" FontSize="15"/>
+                    </ListBoxItem>
+                    <ListBoxItem  Width="120" HorizontalAlignment="left">
+                        <Label x:Name="ii" Content="Importe inicial:" Height="30"  VerticalAlignment="Top" Width="110" FontSize="15"/>
+                    </ListBoxItem>
+                    <ListBoxItem  Width="120" HorizontalAlignment="left" >
+                        <Label x:Name="if" Content="Importe final:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="110" FontSize="15"/>
+                    </ListBoxItem>
+                    <ListBoxItem  Width="120" HorizontalAlignment="left">
+                        <Label x:Name="sob" Content="Sobrante:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="110" FontSize="15"/>
+                    </ListBoxItem>
+                    <ListBoxItem  Width="120" HorizontalAlignment="left">
+                        <Label x:Name="fal" Content="Faltante:" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="110" FontSize="15"/>
+                    </ListBoxItem>
+                </ListBox>
+                <ListBox Height="200" Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
+                    <ListBoxItem  Width="100" HorizontalAlignment="left">
+                        <Label Content="" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="90" FontSize="15"/>
+                    </ListBoxItem>
+                    <ListBoxItem  Width="100" HorizontalAlignment="left" >
+                        <TextBox Name="impini" Width="90" Height="30" ></TextBox>
+                    </ListBoxItem>
+                    <ListBoxItem  Width="100" HorizontalAlignment="left">
+                        <TextBox Name="impfin" Width="90" Height="30" ></TextBox>
+                    </ListBoxItem>
+                    <ListBoxItem  Width="100" HorizontalAlignment="left">
+                        <TextBox Name="sobrante" Width="90" Height="30" ></TextBox>
+                    </ListBoxItem>
+                    <ListBoxItem  Width="100" HorizontalAlignment="left">
+                        <TextBox Name="faltante" Width="90" Height="30" ></TextBox>
+                    </ListBoxItem>
+                </ListBox>
+            </WrapPanel>
+            <Button x:Name="Agregar_com" Content="Agregar Comentario" Click="Agregar_Comentario" Height="20" Width="130" HorizontalAlignment="Center"/>
+        </WrapPanel>
+        <Button x:Name="Aceptar_conteo"  Content="Aceptar Conteo" Click="Aceptar_Conteo" Height="20" Width="100" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Bottom" Visibility="Hidden"></Button>
+    </Grid>
+</Window>
